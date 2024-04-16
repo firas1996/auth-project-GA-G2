@@ -7,13 +7,13 @@ import MainHeader from "./components/MainHeader/MainHeader";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   useEffect(() => {
-    console.log("effect");
+    // console.log("effect");
     const statue = localStorage.getItem("logedIn");
     if (statue === "abc") {
       setIsLoggedIn(true);
     }
   }, []);
-  console.log("after");
+  // console.log("after");
 
   const loginHandler = (email, password) => {
     localStorage.setItem("logedIn", "abc");
