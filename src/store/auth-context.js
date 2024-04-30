@@ -4,7 +4,7 @@ const AuthStore = createContext({
   email: "",
   password: "",
   ali: false,
-  loginHandler: () => {},
+  loginHandler: (email, password) => {},
   logoutHandler: () => {},
 });
 export default AuthStore;

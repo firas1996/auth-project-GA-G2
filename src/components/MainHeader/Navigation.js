@@ -4,26 +4,26 @@ import classes from "./Navigation.module.css";
 import AuthStore from "../../store/auth-context";
 
 const Navigation = () => {
-  const authCtx = useContext(AuthStore);
+  const { ali, logoutHandler } = useContext(AuthStore);
   // return (
   //   <AuthStore.Consumer>
   //     {(authCtx) => {
   return (
     <nav className={classes.nav}>
       <ul>
-        {authCtx.ali && (
+        {ali && (
           <li>
             <a href="/">Users</a>
           </li>
         )}
-        {authCtx.ali && (
+        {ali && (
           <li>
             <a href="/">Admin</a>
           </li>
         )}
-        {authCtx.ali && (
+        {ali && (
           <li>
-            <button onClick={authCtx.logoutHandler}>Logout</button>
+            <button onClick={logoutHandler}>Logout</button>
           </li>
         )}
       </ul>
